@@ -1,0 +1,9 @@
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.DataAccess.dll
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.DataAccess.pdb
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.Model.dll
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\FriendOrganizer.Model.pdb
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csprojAssemblyReference.cache
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csproj.CopyComplete
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.dll
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.pdb
