@@ -28,6 +28,7 @@
             <Label Content="Firstname" 
                    Margin="10 10 10 0"/>
             <TextBox Grid.Row="1" 
+                     Margin="10 0 10 10"
                      Text="{Binding SelectedFriend.FirstName,
                         Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
             
@@ -35,6 +36,7 @@
                    Content="Lastname" 
                    Margin="10 0"/>
             <TextBox Grid.Row="3" 
+                     Margin="10 0 10 10"
                      Text="{Binding SelectedFriend.LastName,
                         Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
@@ -42,6 +44,7 @@
                    Content="Email" 
                    Margin="10 0"/>
             <TextBox Grid.Row="5" 
+                     Margin="10 0 10 10"
                      Text="{Binding SelectedFriend.Email,
                         Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
