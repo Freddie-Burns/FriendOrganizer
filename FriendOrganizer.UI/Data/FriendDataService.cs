@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FriendOrganizer.UI.Data
 {
-    class FriendDataService
+    class FriendDataService : IFriendDataService
     {
         public IEnumerable<Friend> GetAll()
         {
