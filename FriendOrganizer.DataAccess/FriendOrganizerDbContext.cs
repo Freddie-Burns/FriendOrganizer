@@ -1,5 +1,6 @@
 ﻿using FriendOrganizer.Model;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace FriendOrganizer.DataAccess
@@ -17,8 +18,15 @@ namespace FriendOrganizer.DataAccess
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-            modelBuilder.Entity<Friend>()
-                .Property(f => f.FirstName)
+            modelBuilder.Configurations.Add(new FriendConfiguration());
+        }
+    }
+
+    public class FriendConfiguration : EntityTypeConfiguration<Friend>
+    {
+        public FriendConfiguration()
+        {
+            Property(f => f.FirstName)
                 .IsRequired()
                 .HasMaxLength(50);
         }
