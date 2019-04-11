@@ -18,17 +18,6 @@ namespace FriendOrganizer.DataAccess
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-            modelBuilder.Configurations.Add(new FriendConfiguration());
-        }
-    }
-
-    public class FriendConfiguration : EntityTypeConfiguration<Friend>
-    {
-        public FriendConfiguration()
-        {
-            Property(f => f.FirstName)
-                .IsRequired()
-                .HasMaxLength(50);
         }
     }
 }
