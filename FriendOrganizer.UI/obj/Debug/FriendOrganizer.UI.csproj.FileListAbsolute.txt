@@ -21,3 +21,6 @@ C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\obj\Debug\FriendOrg
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Autofac.dll
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Autofac.pdb
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Autofac.xml
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\EntityFramework.dll
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\FriendOrganizer.DataAccess.dll.config
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\EntityFramework.xml
