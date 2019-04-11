@@ -12,3 +12,5 @@ C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\E
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.Migrations.InitialDatabase.resources
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csproj.GenerateResource.cache
