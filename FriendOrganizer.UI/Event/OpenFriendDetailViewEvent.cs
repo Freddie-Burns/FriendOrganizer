@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Prism.Events;
 
 namespace FriendOrganizer.UI.Event
 {
-    class OpenFriendDetailViewEvent
+    public class OpenFriendDetailViewEvent : PubSubEvent<int>
     {
+
     }
 }
