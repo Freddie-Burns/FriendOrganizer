@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\App.xaml
-2269537686
+3484538715
 
-19718992790
+22-800984590
 25677195508
-MainWindow.xaml;View\NavigationView.xaml;
+MainWindow.xaml;View\FriendDetailView.xaml;View\NavigationView.xaml;
 
-True
+False
 
