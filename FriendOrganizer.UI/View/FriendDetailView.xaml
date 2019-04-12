@@ -22,8 +22,8 @@
         
         <TextBox Grid.Row="1" 
                  Margin="10 0 10 10"
-                 Text="{Binding SelectedFriend.FirstName,
-            Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                 Text="{Binding Friend.FirstName,
+                    Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
         
         <Label Grid.Row="2" 
                Content="Lastname" 
@@ -31,8 +31,8 @@
         
         <TextBox Grid.Row="3" 
                  Margin="10 0 10 10"
-                 Text="{Binding SelectedFriend.LastName,
-            Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                 Text="{Binding Friend.LastName,
+                    Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
         
         <Label Grid.Row="4" 
                Content="Email" 
@@ -40,7 +40,7 @@
         
         <TextBox Grid.Row="5" 
                  Margin="10 0 10 10"
-                 Text="{Binding SelectedFriend.Email,
-            Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                 Text="{Binding Friend.Email,
+                    Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </UserControl>
