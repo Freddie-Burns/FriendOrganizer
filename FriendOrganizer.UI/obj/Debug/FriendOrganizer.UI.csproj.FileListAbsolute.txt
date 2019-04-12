@@ -35,3 +35,6 @@ C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Renishaw.
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\obj\Debug\View\FriendDetailView.g.cs
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\obj\Debug\View\FriendDetailView.baml
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Prism.dll
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Prism.pdb
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.UI\bin\Debug\Prism.xml
