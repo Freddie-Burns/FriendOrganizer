@@ -3,14 +3,21 @@ using System;
 
 namespace FriendOrganizer.UI.Wrapper
 {
-    public class FriendWrapper : NotifyDataErrorInfoBase
+    public class ModelWrapper<T> : NotifyDataErrorInfoBase
     {
-        public FriendWrapper(Friend model)
+        public ModelWrapper(T model)
         {
             Model = model;
         }
 
-        public Friend Model { get; }
+        public T Model { get; }
+    }
+
+    public class FriendWrapper : ModelWrapper<Friend>
+    {
+        public FriendWrapper(Friend model) : base(model)
+        {
+        }
 
         public int Id { get { return Model.Id; } }
 
