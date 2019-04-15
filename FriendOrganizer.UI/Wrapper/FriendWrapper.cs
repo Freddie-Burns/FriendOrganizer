@@ -3,16 +3,6 @@ using System;
 
 namespace FriendOrganizer.UI.Wrapper
 {
-    public class ModelWrapper<T> : NotifyDataErrorInfoBase
-    {
-        public ModelWrapper(T model)
-        {
-            Model = model;
-        }
-
-        public T Model { get; }
-    }
-
     public class FriendWrapper : ModelWrapper<Friend>
     {
         public FriendWrapper(Friend model) : base(model)
@@ -23,13 +13,24 @@ namespace FriendOrganizer.UI.Wrapper
 
         public string FirstName
         {
-            get { return Model.FirstName; }
+            get { return GetValue<string>(nameof(FirstName)); }
             set
             {
-                Model.FirstName = value;
-                OnPropertyChanged();
+                SetValue(value);
                 ValidateProperty(nameof(FirstName));
             }
+        }
+
+        public string LastName
+        {
+            get { return GetValue<string>(); }
+            set { SetValue(value); }
+        }
+
+        public string Email
+        {
+            get { return GetValue<string>(); }
+            set { SetValue(value); }
         }
 
         private void ValidateProperty(string propertyName)
@@ -43,26 +44,6 @@ namespace FriendOrganizer.UI.Wrapper
                         AddError(propertyName, "Robots are not valid friends");
                     }
                     break;
-            }
-        }
-
-        public string LastName
-        {
-            get { return Model.LastName; }
-            set
-            {
-                Model.LastName = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Email
-        {
-            get { return Model.Email; }
-            set
-            {
-                Model.Email = value;
-                OnPropertyChanged();
             }
         }
     }
