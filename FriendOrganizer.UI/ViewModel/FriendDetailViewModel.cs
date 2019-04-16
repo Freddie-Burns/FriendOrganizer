@@ -46,6 +46,12 @@ namespace FriendOrganizer.UI.ViewModel
                 }
             };
             ((DelegateCommand)SaveCommand).RaiseCanExecuteChanged();
+            
+            // Trick to trigger Firstname validation.
+            if (Friend.Id == 0)
+            {
+                Friend.FirstName = "";
+            }
         }
 
         public FriendWrapper Friend
