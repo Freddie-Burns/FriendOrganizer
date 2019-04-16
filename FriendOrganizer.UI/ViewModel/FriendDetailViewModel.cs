@@ -25,6 +25,7 @@ namespace FriendOrganizer.UI.ViewModel
             _eventAggregator = eventAggregator;
 
             SaveCommand = new DelegateCommand(OnSaveExecute, OnSaveCanExecute);
+            DeleteCommand = new DelegateCommand(OnDeleteExecute);
         }
 
         public async Task LoadAsync(int? friendId)
@@ -80,6 +81,8 @@ namespace FriendOrganizer.UI.ViewModel
 
         public ICommand SaveCommand { get; }
 
+        public ICommand DeleteCommand { get; }
+
         private bool OnSaveCanExecute()
         {
             // TODO: Check friend has changes.
@@ -96,6 +99,12 @@ namespace FriendOrganizer.UI.ViewModel
                     Id = Friend.Id,
                     DisplayMember = $"{Friend.FirstName} {Friend.LastName}"
                 });
+        }
+
+        private async void OnDeleteExecute()
+        {
+            _friendRepository.Remove(Friend.Model);
+            await _friendRepository.SaveAsync();
         }
 
         private Friend CreateNewFriend()

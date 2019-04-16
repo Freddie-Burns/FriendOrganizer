@@ -24,7 +24,8 @@
         <TextBox Grid.Row="1" 
                  Margin="10 0 10 10"
                  Text="{Binding Friend.FirstName,
-                    Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                        Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
         
         <Label Grid.Row="2" 
                Content="Lastname" 
@@ -33,7 +34,8 @@
         <TextBox Grid.Row="3" 
                  Margin="10 0 10 10"
                  Text="{Binding Friend.LastName,
-                    Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                        Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
         
         <Label Grid.Row="4" 
                Content="Email" 
@@ -42,15 +44,19 @@
         <TextBox Grid.Row="5" 
                  Margin="10 0 10 10"
                  Text="{Binding Friend.Email,
-                    TargetNullValue='',
-                    Mode=TwoWay,
-                    UpdateSourceTrigger=PropertyChanged}"/>
+                        TargetNullValue='',
+                        Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
 
         <StackPanel Grid.Row="7" Orientation="Horizontal">
             <Button Content="Save"
                     Width="125"
                     Margin="10"
                     Command="{Binding SaveCommand}"/>
+            <Button Content="Delete"
+                    Width="125"
+                    Margin="10"
+                    Command="{Binding DeleteCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>
