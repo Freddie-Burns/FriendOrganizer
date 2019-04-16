@@ -4,7 +4,6 @@ using FriendOrganizer.UI.Event;
 using FriendOrganizer.UI.Wrapper;
 using Prism.Commands;
 using Prism.Events;
-using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -85,7 +84,6 @@ namespace FriendOrganizer.UI.ViewModel
 
         private bool OnSaveCanExecute()
         {
-            // TODO: Check friend has changes.
             return Friend != null && !Friend.HasErrors && HasChanges;
         }
 
@@ -105,6 +103,8 @@ namespace FriendOrganizer.UI.ViewModel
         {
             _friendRepository.Remove(Friend.Model);
             await _friendRepository.SaveAsync();
+            _eventAggregator.GetEvent<AfterFriendDeletedEvent>()
+                .Publish(Friend.Id);
         }
 
         private Friend CreateNewFriend()

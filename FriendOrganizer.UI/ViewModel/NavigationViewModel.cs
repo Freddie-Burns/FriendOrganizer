@@ -1,6 +1,7 @@
 ﻿using FriendOrganizer.UI.Data.Lookups;
 using FriendOrganizer.UI.Event;
 using Prism.Events;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,24 +20,9 @@ namespace FriendOrganizer.UI.ViewModel
             _friendLookupService = friendLookupService;
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<AfterFriendSavedEvent>().Subscribe(AfterFriendSaved);
+            _eventAggregator.GetEvent<AfterFriendDeletedEvent>().Subscribe(AfterFriendDeleted);
 
             Friends = new ObservableCollection<NavigationItemViewModel>();
-        }
-
-        private void AfterFriendSaved(AfterFriendSavedEventArgs obj)
-        {
-            var lookupItem = Friends.SingleOrDefault(l => l.Id == obj.Id);
-            if (lookupItem == null)
-            {
-                Friends.Add(new NavigationItemViewModel(
-                    obj.Id,
-                    obj.DisplayMember,
-                    _eventAggregator));
-            }
-            else
-            {
-                lookupItem.DisplayMember = obj.DisplayMember;
-            }
         }
 
         public async Task LoadAsync()
@@ -50,5 +36,30 @@ namespace FriendOrganizer.UI.ViewModel
         }
 
         public ObservableCollection<NavigationItemViewModel> Friends { get; }
+
+        private void AfterFriendSaved(AfterFriendSavedEventArgs obj)
+        {
+            NavigationItemViewModel lookupItem = Friends.SingleOrDefault(l => l.Id == obj.Id);
+            if (lookupItem == null)
+            {
+                Friends.Add(new NavigationItemViewModel(
+                    obj.Id,
+                    obj.DisplayMember,
+                    _eventAggregator));
+            }
+            else
+            {
+                lookupItem.DisplayMember = obj.DisplayMember;
+            }
+        }
+
+        private void AfterFriendDeleted(int friendId)
+        {
+            NavigationItemViewModel friend = Friends.SingleOrDefault(l => l.Id == friendId);
+            if (friend != null)
+            {
+                Friends.Remove(friend);
+            }
+        }
     }
 }
