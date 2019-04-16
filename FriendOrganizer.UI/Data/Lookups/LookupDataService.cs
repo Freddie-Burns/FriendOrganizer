@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FriendOrganizer.UI.Data.Lookups
@@ -19,7 +18,7 @@ namespace FriendOrganizer.UI.Data.Lookups
         }
 
          public async Task<IEnumerable<LookupItem>> GetFriendLookupAsync()
-        {
+         {
             using (var ctx = _contextCreator())
             {
                 return await ctx.Friends.AsNoTracking()
@@ -31,6 +30,6 @@ namespace FriendOrganizer.UI.Data.Lookups
                     })
                     .ToListAsync();
             }
-        }
+         }
     }
 }

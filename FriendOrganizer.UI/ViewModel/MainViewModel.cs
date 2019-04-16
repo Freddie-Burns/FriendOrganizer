@@ -1,22 +1,27 @@
 ﻿using FriendOrganizer.UI.Event;
+using FriendOrganizer.UI.View.Services;
 using Prism.Events;
 using System;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FriendOrganizer.UI.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
         private IEventAggregator _eventAggregator;
-        private Func<IFriendDetailViewModel> _friendDetailViewModelCreator;
+        private IMessageDialogService _messageDialogService;
         private IFriendDetailViewModel _friendDetailViewModel;
+        private Func<IFriendDetailViewModel> _friendDetailViewModelCreator;
 
         public MainViewModel(
+            IEventAggregator eventAggregator,
             INavigationViewModel navigationViewModel,
-            Func<IFriendDetailViewModel> friendDetailViewModelCreator,
-            IEventAggregator eventAggregator)
+            IMessageDialogService messageDialogService,
+            Func<IFriendDetailViewModel> friendDetailViewModelCreator)
         {
             _eventAggregator = eventAggregator;
+            _messageDialogService = messageDialogService;
             _friendDetailViewModelCreator = friendDetailViewModelCreator;
 
             _eventAggregator.GetEvent<OpenFriendDetailViewEvent>()
@@ -32,7 +37,6 @@ namespace FriendOrganizer.UI.ViewModel
 
         public INavigationViewModel NavigationViewModel { get; }
 
-
         public IFriendDetailViewModel FriendDetailViewModel
         {
             get { return _friendDetailViewModel; }
@@ -43,9 +47,19 @@ namespace FriendOrganizer.UI.ViewModel
             }
         }
 
-
         private async void OnOpenFriendDetailView(int friendId)
         {
+            if (FriendDetailViewModel != null && FriendDetailViewModel.HasChanges)
+            {
+                var result = _messageDialogService.ShowOKCancelDialog(
+                    "You've made changes, navigate away?", 
+                    "Question");
+
+                if (result == MessageDialogResult.Cancel)
+                {
+                    return;
+                }
+            }
             FriendDetailViewModel = _friendDetailViewModelCreator();
             await FriendDetailViewModel.LoadAsync(friendId);
         }
