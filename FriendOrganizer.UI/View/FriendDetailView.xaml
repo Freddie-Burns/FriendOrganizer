@@ -72,21 +72,21 @@
                         Margin="10 10 0 0"
                         Command="{Binding RemovePhoneNumber}"/>
             </StackPanel>
-            
+
             <DataGrid ItemsSource="{Binding PhoneNumbers}"
                       SelectedItem="{Binding SelectedPhoneNumber, Mode=TwoWay}"
                       AutoGenerateColumns="False"
                       RowHeaderWidth="0">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Phone Numbers"
-                                        Width="*"
-                                        Binding="{Binding Number, 
-                                            Mode=TwoWay, 
-                                            UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn 
+                        Header="Phone Numbers"
+                        Width="*"
+                        ElementStyle="{StaticResource DataGridColumnStyle}"
+                        EditingElementStyle="{StaticResource DataGridEditingColumnStyle}"
+                        Binding="{Binding Number, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>
-
 
         <StackPanel Grid.Row="9" Orientation="Horizontal">
             <Button Content="Save"
