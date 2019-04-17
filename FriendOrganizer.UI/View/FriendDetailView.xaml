@@ -70,7 +70,7 @@
                 <Button Content="Remove"
                         Width="125"
                         Margin="10 10 0 0"
-                        Command="{Binding RemovePhoneNumber}"/>
+                        Command="{Binding RemovePhoneNumberCommand}"/>
             </StackPanel>
 
             <DataGrid ItemsSource="{Binding PhoneNumbers}"
