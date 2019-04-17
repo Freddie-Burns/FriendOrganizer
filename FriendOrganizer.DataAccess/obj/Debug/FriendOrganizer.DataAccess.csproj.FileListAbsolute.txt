@@ -16,3 +16,4 @@ C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\F
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.csproj.GenerateResource.cache
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.Migrations.AddedProgrammingLanguage.resources
 C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.Migrations.AddedFriendPhoneNumbers.resources
+C:\Users\fb142897\Code\CS\FriendOrganizer\FriendOrganizer.DataAccess\obj\Debug\FriendOrganizer.DataAccess.Migrations.AddedMeeting.resources
