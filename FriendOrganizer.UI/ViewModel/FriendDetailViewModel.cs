@@ -205,7 +205,13 @@ namespace FriendOrganizer.UI.ViewModel
 
         private void OnAddPhoneNumberExecute()
         {
-            // TODO: Implement this.
+            var newNumber = new FriendPhoneNumberWrapper(new FriendPhoneNumber());
+            newNumber.PropertyChanged += FriendPhoneNumberWrapper_PropertyChanged;
+            PhoneNumbers.Add(newNumber);
+            Friend.Model.PhoneNumbers.Add(newNumber.Model);
+
+            // Trigger validation.
+            newNumber.Number = "";
         }
 
         private void OnRemovePhoneNumberExecute()
